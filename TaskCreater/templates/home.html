@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Python Asana Sample</h1>
+  <p>This example shows how to get an OAuth token from asana using the <a href="https://developers.asana.com/docs/" target="_blank">authorization code grant flow</a> and to use that token to make calls to the Outlook APIs.</p>
+  <p> Must be create a workspace before using it <a href="https://app.asana.com/0/home/" target="_blank"> Click here to create workspace</a></p>
+  <p>
+    <a class="btn btn-lg btn-primary" href="{{signin_url}}" role="button" id="connect-button">Connect to Asana</a>
+  </p>
+</div>
+{% endblock %}

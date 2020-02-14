@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Your Workspaces</h1>
+<table class="table">
+  <tr>
+    <th>gid</th>
+    <th>name</th>
+    <th>Tasks View</th>
+  </tr>
+
+  {% for sp in gids %}
+    <tr>
+      <td>{{ sp.gid }}</td>
+      <td>{{ sp.name }}</td>
+      <td><button onclick="window.location.href='tasks?gid={{sp.gid}}'">Click Here</button></td>
+    </tr>
+  {% endfor %}
+</table>
+{% endblock %}

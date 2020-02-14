@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1> Workspaces</h1>
+<form class="form-horizontal" action="taskset" method='POST'>
+  <fieldset>
+  
+  <!-- Form Name -->
+  <legend>Form Name</legend>
+  
+  <!-- Select Basic -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="selectworkspace">Select Workspace</label>
+    <div class="col-md-4">
+      <select id="selectbasic" name="workspace" class="form-control">
+        {% for sp in gids %}
+        <option value="{{sp.gid}}">{{sp.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  
+  <!-- Textarea -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="textarea"></label>
+    <div class="col-md-4">                     
+      <textarea class="form-control" id="name" name="name">Write something</textarea>
+    </div>
+  </div>
+  
+  <!-- Button -->
+  <div class="form-group text-center">
+    <label class="col-md-4 control-label"></label>
+    <div class="col-md-4">
+      <button id="singlebutton" name="singlebutton" class="btn btn-primary">Add Task</button>
+    </div>
+  </div>
+  
+  </fieldset>
+  </form>
+  
+{% endblock %}
